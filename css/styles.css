@@ -241,34 +241,19 @@ ul {
 .features-item {
 	min-width: 270px;
 	flex-basis: calc((100% - var(--indent) * (var(--items)-1)) / var(--items));
+	display: flex;
+	flex-direction: column;
 }
-.features-item::before {
-	display: block;
-	content: "";
-
+.icon-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 270px;
 	height: 120px;
-	border-radius: 4px;
-
 	margin-bottom: 30px;
 
-	/* outline: 1px solid royalblue; */
-
-	background-repeat: no-repeat;
-	background-size: 70px;
-	background-position: center;
+	border-radius: 4px;
 	background-color: var(--secondary-bcg-color);
-}
-.icon-antenna::before {
-	background-image: url("../images/icons/antenna.svg");
-}
-.icon-clock::before {
-	background-image: url("../images/icons/clock.svg");
-}
-.icon-diagram::before {
-	background-image: url("../images/icons/diagram.svg");
-}
-.icon-astronaut::before {
-	background-image: url("../images/icons/astronaut.svg");
 }
 .features-item .item-header {
 	text-transform: uppercase;
@@ -472,9 +457,6 @@ footer .logo-part {
 	line-height: 1.88;
 	/* outline: 1px solid rgb(226, 177, 43); */
 }
-/* .project-item .item-text {
-	display: none;
-} */
 
 /* ----------------------Socials icons-------------------------- */
 .socials {
